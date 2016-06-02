@@ -17,7 +17,7 @@
 					<div class="col-md-3 text-center">
 						<div class="row-space-2">
 							<div class="img-responsive">
-							 <%= link_to user_path(current_user) do %>
+							 <%= link_to user_path(@listing.user) do %>
 							 <%= image_tag(@listing.user.avatar.url) %>
 							 <% end %>
 							</div>
