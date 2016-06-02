@@ -76,7 +76,7 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-  
+
   #sets paperclip to upload images to Amazon S3
   config.paperclip_defaults = {
     storage: :s3,
@@ -87,4 +87,21 @@ Rails.application.configure do
       s3_region: ENV.fetch('AWS_REGION'),
   }
 }
+
+# Do not dump schema after migrations.
+  config.active_record.dump_schema_after_migration = false
+  config.action_mailer.default_url_options = { :host => 'nativos.herokuapp.com' }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.default :charset => "utf-8"
+
+  config.action_mailer.smtp_settings = {
+    :port           => 587,
+    :address        => 'smtp.mailgun.org',
+    :user_name      => 'postmaster@sandbox9b4f7df3b5794696bf59d0e9079bdc98.mailgun.org',
+    :password       => 'af08d3b0bb2aa0fe1e250426ac8ff26a',
+    :domain         => 'sandbox9b4f7df3b5794696bf59d0e9079bdc98.mailgun.org',
+    :authentication => :plain
+  }
 end
