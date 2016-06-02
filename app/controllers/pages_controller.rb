@@ -12,12 +12,12 @@ class PagesController < ApplicationController
   	arrResult = Array.new
 
   	if session[:loc_search] && session[:loc_search] != ""
-  		@listings_address = Listing.where(active: true).near(session[:loc_search], 5, order: 'distance')
+  		@listings_full_street_address = Listing.where(active: true).near(session[:loc_search], 5, order: 'distance')
   	else
-  		@listings_address = Listing.where(active: true).all
+  		@listings_full_street_address = Listing.where(active: true).all
   	end
 
-  	@search = @listings_address.ransack(params[:q])
+  	@search = @listings_full_street_address.ransack(params[:q])
   	@listings = @search.result
 
   	@arrListings = @listings.to_a
