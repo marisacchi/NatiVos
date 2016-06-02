@@ -23,18 +23,13 @@
 								<%= image_tag trip.listing.photos[0].image.url(:thumb) if trip.listing.photos.length > 0 %>
 							<% end %>
 						</div>
+
 						<div class="col-md-2">
 							<%= link_to user_path(trip.listing.user) do %>
-								<% if current_user.image %>
-									<%= image_tag avatar_url(trip.listing.user), class: "img-circle avatar-medium" %>
-
-								<% else %>
-								<div class="img-responsive">
-								 <%= image_tag(current_user.avatar.url) %>
-							 </div>
-							 <% end %>
+								<%= image_tag (trip.listing.user.avatar.url), class: "circular2" %>
 							<% end %>
 						</div>
+						
 						<div class="col-md-2 right">
 							<h4>$<%= trip.total %></h4>
 						</div>
