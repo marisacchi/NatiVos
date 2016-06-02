@@ -35,7 +35,7 @@ class ReservationsController < ApplicationController
 				item_name: @reservation.listing.listing_name,
 				item_number: @reservation.id,
 				quantity: '1',
-				return: 'http://5dfb6ea4.ngrok.io/your_trips'
+				return: 'https://nativos.herokuapp.com/your_trips'
 			}
 
 			redirect_to "https://www.sandbox.paypal.com/cgi-bin/webscr?" + values.to_query
