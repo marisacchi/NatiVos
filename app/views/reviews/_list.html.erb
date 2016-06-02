@@ -24,7 +24,7 @@
 
 		<script>
 			$('#stars_<%= r.id %>').raty({
-				path: 'https://s3.amazonaws.com/nativosapp/',
+				url: 'https://s3.amazonaws.com/nativosapp',
 				readOnly: true,
 				score: <%= r.star %>
 			});
