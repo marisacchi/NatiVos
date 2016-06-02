@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def home
-  	@listings = Listing.limit(3)
+  	@listings = Listing
   end
 
   def search
