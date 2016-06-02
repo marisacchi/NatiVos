@@ -7,6 +7,7 @@ group :development, :test do
 end
 group :production do
   gem 'pg'
+  gem 'rails_12factor'
 end
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
@@ -42,6 +43,7 @@ gem 'private_pub'
 gem 'thin'
 gem 'ransack'
 gem "heroku"
+gem 'aws-sdk', '~> 2.3'
 
 group :development, :test do
   gem 'byebug'
