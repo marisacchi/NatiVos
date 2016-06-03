@@ -49,7 +49,10 @@ body {
   border-radius: 2px;
   padding: 10px 0;
   margin-top: 10px;
+  background-color: #5AB0FF;
+  color: #fff;
 }
+
 
 .panel-default .panel-heading {
   color: #565a5c;
@@ -337,6 +340,11 @@ input[type="checkbox"]:checked:before {
 .reservation-picture {
   max-width: 100px;
   max-height: 100px;
+}
+
+.vertical-center {
+
+  text-align: center;
 }
 
 //   #wrapper {
