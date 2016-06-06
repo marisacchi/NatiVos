@@ -18,7 +18,7 @@
 					<div class="col-md-4 select">
 						<div class="form-group">
 							<label>Choose your Experience Type</label>
-							<%= f.select :experience_type, [["City/Histotical Tour","City/Histotical Tour"], ["Pub Tour","Pub Tour"], ["Craft Beer Tour","Craft Beer Tour"], ["Wineries Tour","Wineries Tour"],["Star Gazing","Star Gazing"], ["Mountain Bike","Mountain Bike"], ["Snowboarding","Snowboarding"], ["Skiing","Skiing"], ["Fitness","Fitness"], ["Yoga","Yoga"], ["Golf","Golf"], ["Surf","Surf"], ["Kayak","Kayak"], ["Paddle Board","Paddle Board"], ["Snorkeling","Snorkeling"]],prompt: "Select...", class: "form-control" %>
+							<%= f.select :experience_type, [["City/Histotical Tour","City/Histotical Tour"], ["Pub Tour","Pub Tour"], ["Craft Beer Tour","Craft Beer Tour"], ["Wineries Tour","Wineries Tour"],["Star Gazing","Star Gazing"], ["Mountain Bike","Mountain Bike"], ["Snowboarding","Snowboarding"], ["Skiing","Skiing"], ["Fitness","Fitness"], ["Yoga","Yoga"], ["Golf","Golf"], ["Surf","Surf"], ["Kayak","Kayak"], ["Paddle Board","Paddle Board"], ["Snorkeling","Snorkeling"], ["Fishing","Fishing"], ["Trekking","Trekking"], ["Hiking","Hiking"], ["Other","Other"]],prompt: "Select...", class: "form-control" %>
 						</div>
 					</div>
 
@@ -77,66 +77,93 @@
 				<br>
 				<hr>
 				<label>Do you have any extra gear or equipment you can offer?</label>
+
 				<div class="row">
-					<div class="col-md-3">
-						<div class="form-group">
-							<%= f.check_box :is_car %> Car/Van
-						</div>
-						<div class="form-group">
-							<%= f.check_box :is_mtb %> Mountain Bike
-						</div>
-						<div class="form-group">
-							<%= f.check_box :is_snb %> Snowboard
-						</div>
+				 <div class="col-md-3">
+					<div class="form-group">
+						<%= f.check_box :is_car %> Car/Van
 					</div>
 
-          <div class="row">
-  					<div class="col-md-3">
-  						<div class="form-group">
-  							<%= f.check_box :is_ski %> Skis
-  						</div>
-  						<div class="form-group">
-  							<%= f.check_box :is_golf %> Golf Clubs
-  						</div>
-  						<div class="form-group">
-  							<%= f.check_box :is_fitness %> Fitness Gear
-  						</div>
-  					</div>
+					<div class="form-group">
+						<%= f.check_box :is_mtb %> Mountain Bike
+					</div>
 
-          <div class="row">
-  					<div class="col-md-3">
-  						<div class="form-group">
-  							<%= f.check_box :is_yoga %> Yoga Gear
-  						</div>
-  						<div class="form-group">
-  							<%= f.check_box :is_surf %> Surf Board
-  						</div>
-  						<div class="form-group">
-  							<%= f.check_box :is_kayak %> Kayak
-  						</div>
-  					</div>
-				<div class="row">
-					<div class="col-md-3">
-						<div class="form-group">
-							<%= f.check_box :is_paddle %> Paddle Board
-						</div>
+					<div class="form-group">
+						<%= f.check_box :is_snb %> Snowboard
+					</div>
 
-						<div class="form-group">
-							<%= f.check_box :is_snorkel %> Snorkeling Gear
-						</div>
+					<div class="form-group">
+						<%= f.check_box :is_ski %> Skis
+					</div>
 
-						<div class="form-group">
-							<%= f.check_box :is_star %> Star Gazing Gear
-						</div>
+				  </div>
 
 
+				<div class="col-md-3">
+
+					<div class="form-group">
+						<%= f.check_box :is_golf %> Golf Clubs
+					</div>
+
+					<div class="form-group">
+						<%= f.check_box :is_fitness %> Fitness Gear
+					</div>
+
+					<div class="form-group">
+						<%= f.check_box :is_yoga %> Yoga Gear
+					</div>
+
+					<div class="form-group">
+						<%= f.check_box :is_surf %> Surf Board
+					</div>
+
+				</div>
+
+
+				<div class="col-md-3">
+
+					<div class="form-group">
+						<%= f.check_box :is_kayak %> Kayak
+					</div>
+
+					<div class="form-group">
+						<%= f.check_box :is_paddle %> Paddle Board
+					</div>
+
+					<div class="form-group">
+						<%= f.check_box :is_snorkel %> Snorkeling Gear
+					</div>
+
+					<div class="form-group">
+						<%= f.check_box :is_fish %> Fishing Gear
+					</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="form-group">
+						<%= f.check_box :is_star %> Star Gazing Gear
+					</div>
+
+					<div class="form-group">
+						<%= f.check_box :is_hik %> Hiking Gear
+					</div>
+
+					<div class="form-group">
+						<%= f.check_box :is_trek %> Trekking Gear
+					</div>
+
+					<div class="form-group">
+						<%= f.check_box :is_other %> Other
 					</div>
 				</div>
 			</div>
+
+
+
 			<hr>
 
 			<div class="row">
-				 <div class="col-md-4">
+				 <div class="col-md-5">
 					<div class="form-group">
 						<%= f.check_box :active %>Make your NatiVos Listing Active!
 					</div>

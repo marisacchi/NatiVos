@@ -30,8 +30,10 @@
 					<div class="col-md-8 text-center">
 						<h4><%= @listing.listing_name %></h4>
 						<%= @listing.full_street_address %>
+            				<hr>
 
-            <hr>
+
+
 
 						<div class="row text-center row-space-1">
 							<div class="col-sm-3">
@@ -74,6 +76,7 @@
 			</div>
 		</div>
     <br>
+
 		<!-- About -->
 		<div class="row">
 			<div class="col-md-12">
@@ -82,6 +85,9 @@
 			</div>
 		</div>
     <hr>
+
+
+
 
 		<!-- Amenities -->
 		<div class="row">
@@ -97,6 +103,7 @@
 							<li class="<%= 'text-line-through' if !@listing.is_car %>">Car/Van</li>
 							<li class="<%= 'text-line-through' if !@listing.is_mtb %>">Mountain Bike</li>
 							<li class="<%= 'text-line-through' if !@listing.is_snb %>">Snowboard</li>
+							<li class="<%= 'text-line-through' if !@listing.is_fish %>">Fishing Gear</li>
 						</ul>
 					</div>
 
@@ -105,6 +112,7 @@
 							<li class="<%= 'text-line-through' if !@listing.is_ski %>">Skis</li>
 	            <li class="<%= 'text-line-through' if !@listing.is_golf %>">Golf Clubs</li>
 	            <li class="<%= 'text-line-through' if !@listing.is_fitness %>">Fitness Gear</li>
+	            <li class="<%= 'text-line-through' if !@listing.is_hik %>">Hiking Gear</li>
 						</ul>
 					</div>
 
@@ -113,6 +121,7 @@
 	            <li class="<%= 'text-line-through' if !@listing.is_yoga %>">Yoga Gear</li>
 	            <li class="<%= 'text-line-through' if !@listing.is_surf %>">Surf Board</li>
 	            <li class="<%= 'text-line-through' if !@listing.is_kayak %>">Kayak</li>
+	            <li class="<%= 'text-line-through' if !@listing.is_trek %>">Treking Gear</li>
 						</ul>
           </div>
 
@@ -121,7 +130,8 @@
 						<ul class="amenities">
 	            <li class="<%= 'text-line-through' if !@listing.is_paddle %>">Paddle Board</li>
 	            <li class="<%= 'text-line-through' if !@listing.is_snorkel %>">Snorkeling Gear</li>
-							<li class="<%= 'text-line-through' if !@listing.is_star %>">Star Gazing Gear</li>
+				<li class="<%= 'text-line-through' if !@listing.is_star %>">Star Gazing Gear</li>
+				<li class="<%= 'text-line-through' if !@listing.is_other %>">Other</li>
 						</ul>
           </div>
 				</div>
