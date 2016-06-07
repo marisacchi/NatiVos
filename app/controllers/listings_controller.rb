@@ -31,7 +31,7 @@ class ListingsController < ApplicationController
       end
 
       @photos = @listing.photos
-      redirect_to edit_listing_path(@listing), notice: "Saved..."
+      redirect_to listing_path(@listing), notice: "Saved..."
     else
       render :new
     end
@@ -54,7 +54,7 @@ class ListingsController < ApplicationController
         end
       end
 
-      redirect_to edit_listing_path(@listing), notice: "Updated..."
+      redirect_to listing_path(@listing), notice: "Updated..."
     else
       render :edit
     end
